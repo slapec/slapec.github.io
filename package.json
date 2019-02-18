@@ -1,0 +1,10 @@
+{
+  "name": "slapec.hu",
+  "scripts": {
+    "dev": "nuxt",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.4.3"
+  }
+}
