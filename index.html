@@ -1,22 +1,26 @@
-{% extends 'templates/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="src/static/style.css">
+    
     <meta name="author" content="insert your name here">
     <meta name="keywords" content="insert, your, keywords, here">
     <title>My first post</title>
-{% endblock %}
 
-{% block body %}
+</head>
+<body>
+    <h1>slage</h1>
+
+    
     This is the index page:
 
     <ol>
-        {% for page in pages %}
-        <li>
-            <a href="{{ page.url }}">{{ page.title }}</a> by {{ page.author }}<br>
-            Tags: {{ page.keywords }}
-        </li>
-        {% else %}
+        
         <li>No pages so far</li>
-        {% endfor %}
+        
     </ol>
-{% endblock %}
+
+</body>
+</html>
