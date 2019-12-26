@@ -1,0 +1,15 @@
+{% extends 'templates/base.html' %}
+
+{% block title %}{{ self.post_title() }} - {{ super() }}{% endblock %}
+
+{% block main %}
+<article>
+    <header>
+        <h1>{% block post_title %}{% endblock %}</h1>
+        <section>
+            {% block post_foreword %}{% endblock %}
+        </section>
+    </header>
+    {% block post_body %}{% endblock %}
+</article>
+{% endblock %}

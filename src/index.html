@@ -1,22 +1,16 @@
 {% extends 'templates/base.html' %}
 
-{% block head %}
-    <meta name="author" content="insert your name here">
-    <meta name="keywords" content="insert, your, keywords, here">
-    <title>My first post</title>
-{% endblock %}
-
-{% block body %}
-    This is the index page:
+{% block main %}
+    Ez itt az index oldal:
 
     <ol>
         {% for page in pages %}
         <li>
-            <a href="{{ page.url }}">{{ page.title }}</a> by {{ page.author }}<br>
-            Tags: {{ page.keywords }}
+            <a href="{{ page.url }}">{{ page.title }}</a> <i>({{ page.author }})</i><br>
+            Tagek: {{ page.keywords|join(', ') }}
         </li>
         {% else %}
-        <li>No pages so far</li>
+        <li>Nincs egyetlen post sem :(</li>
         {% endfor %}
     </ol>
 {% endblock %}

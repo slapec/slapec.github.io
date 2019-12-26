@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html lang="{% block language %}en{% endblock %}">
+<html lang="{% block language %}hu{% endblock %}">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="src/static/style.css">
-    {% block head %}{% endblock %}
+    <meta name="author" content="{% block author %}slapec{% endblock %}">
+    <meta name="keywords" content="{% block keywords %}{% endblock %}">
+    <title>{% block title %}{% endblock %}slapec blogja</title>
+    <link rel="stylesheet" href="/src/static/style.css">
 </head>
 <body>
-    <h1>slage</h1>
+    <header>
+        <h1><a href="/">slapec</a></h1>
+        <h2>megpróbálok megint megpróbálni blogolni!</h2>
+    </header>
 
-    {% block body %}{% endblock %}
+    <main>
+        {% block main %}{% endblock %}
+    </main>
 </body>
 </html>
