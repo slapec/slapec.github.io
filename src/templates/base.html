@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta name="author" content="{% block author %}slapec{% endblock %}">
     <meta name="keywords" content="{% block keywords %}{% endblock %}">
-    <title>{% block title %}{% endblock %}slapec blogja</title>
+    <meta name="generator" content="{{ this.generator }}">
+    <title>{% block title %}{% endblock %}slapec</title>
     <link rel="stylesheet" href="/src/static/style.css">
 </head>
 <body>
-    <header>
+    <header class="site">
         <h1><a href="/">slapec</a></h1>
-        <h2>megpróbálok megint megpróbálni blogolni!</h2>
+        <h2>ha már innen is költöznöm kell, akkor baj van</h2>
     </header>
 
-    <main>
+    <main class="site">
         {% block main %}{% endblock %}
     </main>
+
+    <footer class="site">
+        Powered by <a href="https://github.com/slapec/slage">{{ this.generator }}</a>
+    </footer>
 </body>
 </html>

@@ -1,13 +1,12 @@
 {% extends 'templates/base.html' %}
 
 {% block main %}
-    Ez itt az index oldal:
-
     <ol>
         {% for page in pages %}
         <li>
             <a href="{{ page.url }}">{{ page.title }}</a> <i>({{ page.author }})</i><br>
             Tagek: {{ page.keywords|join(', ') }}
+            Folytatás ...
         </li>
         {% else %}
         <li>Nincs egyetlen post sem :(</li>

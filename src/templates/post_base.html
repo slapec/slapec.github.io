@@ -3,13 +3,14 @@
 {% block title %}{{ self.post_title() }} - {{ super() }}{% endblock %}
 
 {% block main %}
-<article>
+<article class="post">
     <header>
         <h1>{% block post_title %}{% endblock %}</h1>
-        <section>
-            {% block post_foreword %}{% endblock %}
-        </section>
+        <h2>{% block post_date %}{{ this.created_at.strftime('%Y-%m-%d %H:%M:%S') }}{% endblock %}</h2>
     </header>
+    <section>
+        {% block post_foreword %}{% endblock %}
+    </section>
     {% block post_body %}{% endblock %}
 </article>
 {% endblock %}
