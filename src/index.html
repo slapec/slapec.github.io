@@ -1,15 +1,15 @@
 {% extends 'templates/base.html' %}
 
+{% block head %}
+<link rel="stylesheet" href="/src/static/index.css">
+{% endblock %}
+
 {% block main %}
     <ol>
         {% for page in pages %}
         <li>
-            <a href="{{ page.url }}">{{ page.title }}</a> <i>({{ page.author }})</i><br>
-            Tagek: {{ page.keywords|join(', ') }}
-            Folytatás ...
+            {{ page.article }}
         </li>
-        {% else %}
-        <li>Nincs egyetlen post sem :(</li>
         {% endfor %}
     </ol>
 {% endblock %}

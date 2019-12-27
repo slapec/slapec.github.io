@@ -1,0 +1,24 @@
+{% extends 'templates/post_base.html' %}
+
+{% block keywords%}personal{% endblock %}
+
+{% block post_title %}Második{% endblock %}
+
+{% block post_body %}
+<p>
+    Most már csak azért is kell írnom pár bejegyzést, hogy tesztelhessem a blog engine-emet.
+</p>
+<p>
+    Az egyik legfontosabb feature, hogy működik-e a syntax highlighting:
+</p>
+<pre>
+    <code class="python">
+        def hello_world():
+            return
+    </code>
+</pre>
+<p>
+    A lapozás még egyelőre nem működik, de amennyi postot szoktam írni, szerintem egy
+    újabb évtizedig fog tartani, mire szükség lesz erre a feature-re.
+</p>
+{% endblock %}

@@ -8,6 +8,9 @@
     <meta name="generator" content="{{ this.generator }}">
     <title>{% block title %}{% endblock %}slapec</title>
     <link rel="stylesheet" href="/src/static/style.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/default.min.css">
+
+    {% block head %}{% endblock %}
 </head>
 <body>
     <header class="site">
@@ -19,8 +22,13 @@
         {% block main %}{% endblock %}
     </main>
 
+    {% block footer %}{% endblock %}
+
     <footer class="site">
-        Powered by <a href="https://github.com/slapec/slage">{{ this.generator }}</a>
+        <a href="https://github.com/slapec/slage">♡ {{ this.generator }}</a>
     </footer>
+
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

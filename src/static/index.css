@@ -1,0 +1,9 @@
+main.site ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+main.site ol li {
+    margin-bottom: 1em;
+}
